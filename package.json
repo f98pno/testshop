@@ -1,0 +1,14 @@
+{
+  "name": "testshop",
+  "version": "1.0.0",
+  "description": "Peters webshop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "Peter Novak",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
