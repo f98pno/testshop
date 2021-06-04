@@ -1,24 +1,34 @@
 {
-  "name": "testshop",
-  "version": "1.0.0",
-  "description": "Peters webshop",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "author": "Peter Novak",
-  "license": "MIT",
-  "dependencies": {
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.12.12"
-  },
-  "devDependencies": {
-    "concurrently": "^6.2.0",
-    "nodemon": "^2.0.7"
-  }
+    "name": "testshop",
+    "version": "1.0.0",
+    "description": "Peters webshop",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node backend/server",
+        "server": "nodemon backend/server",
+        "client": "npm start --prefix frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "author": "Peter Novak",
+    "license": "MIT",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.12.12"
+    },
+    "devDependencies": {
+        "concurrently": "^6.2.0",
+        "eslint": "^7.27.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "nodemon": "^2.0.7",
+        "prettier": "^2.3.0"
+    }
 }
