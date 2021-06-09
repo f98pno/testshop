@@ -16,6 +16,8 @@
     "node": true
   },
   "rules": {
+    "no-nested-ternary": 0,
+    "import/prefer-default-export": 0,
     "object-curly-newline": ["error", { "multiline": true }],
     "quotes": [1, "single"],
     "operator-linebreak": [1, "before"],
