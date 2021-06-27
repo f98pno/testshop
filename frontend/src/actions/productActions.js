@@ -98,7 +98,6 @@ export const createProduct = () => async (dispatch, getState) => {
       },
     }
 
-    // The empty object is needed because of the post request and no data is being sent
     const { data } = await axios.post(`/api/products`, {}, config)
 
     dispatch({
@@ -128,12 +127,11 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 
     const config = {
       headers: {
-        'Content-type': 'application/json',
+        'Content-Type': 'application/json',
         Authorization: `Bearer ${userInfo.token}`,
       },
     }
 
-    // The empty object is needed because of the post request and no data is being sent
     const { data } = await axios.put(
       `/api/products/${product._id}`,
       product,
