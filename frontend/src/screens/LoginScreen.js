@@ -44,6 +44,7 @@ const LoginScreen = ({ location, history }) => {
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
+
         <Form.Group controlId='password'>
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -53,10 +54,12 @@ const LoginScreen = ({ location, history }) => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-        <Button type='submit' variant='primarily'>
+
+        <Button type='submit' variant='primary'>
           Sign In
         </Button>
       </Form>
+
       <Row className='py-3'>
         <Col>
           New Customer?{' '}
