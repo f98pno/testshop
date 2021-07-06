@@ -38,6 +38,8 @@ export const login = (email, password) => async (dispatch) => {
       },
     }
 
+    console.log(email)
+    console.log(password)
     const { data } = await axios.post(
       '/api/users/login',
       { email, password },
@@ -49,6 +51,7 @@ export const login = (email, password) => async (dispatch) => {
       payload: data,
     })
 
+    console.log(data)
     localStorage.setItem('userInfo', JSON.stringify(data))
   } catch (error) {
     dispatch({
@@ -63,12 +66,14 @@ export const login = (email, password) => async (dispatch) => {
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo')
-  localStorage.removeItem('paymentMethod')
+  localStorage.removeItem('cartItems')
   localStorage.removeItem('shippingAddress')
+  localStorage.removeItem('paymentMethod')
   dispatch({ type: USER_LOGOUT })
   dispatch({ type: USER_DETAILS_RESET })
   dispatch({ type: ORDER_LIST_MY_RESET })
   dispatch({ type: USER_LIST_RESET })
+  document.location.href = '/login'
 }
 
 export const register = (name, email, password) => async (dispatch) => {
